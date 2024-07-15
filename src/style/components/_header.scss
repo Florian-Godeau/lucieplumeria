@@ -1,0 +1,31 @@
+.navbar-opacity {
+    width: 100%;
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .nav-link {
+      margin: 0 15px;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+    }
+  
+    .logo {
+      width: 190px;
+      height: auto;
+    }
+  
+    .instagram-logo {
+      width: 30px; // Adjust size as needed
+      height: auto;
+      margin-left: 10px; // Adjust spacing as needed
+    }
+  }
