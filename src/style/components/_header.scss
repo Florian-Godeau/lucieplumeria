@@ -25,14 +25,24 @@
   }
 
   .instagram-logo {
-    width: 30px; // Adjust size as needed
+    width: 50px; // Adjust size as needed
     height: auto;
-    margin-left: 10px; // Adjust spacing as needed
+    margin-right: 10px;
   }
 
   .linkedIn-logo {
-    width: 40px; // Adjust size as needed
+    width: 50px; // Adjust size as needed
     height: auto;
-    margin-left: 10px; // Adjust spacing as needed
+    margin-right: 10px;
+  }
+
+  .youtube-logo {
+    width: 60px; // Adjust size as needed
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .logo-nav {
+    margin: 0;
   }
 }

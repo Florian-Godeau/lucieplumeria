@@ -15,6 +15,7 @@ function Footer() {
             <span className="footer-link" onClick={handleShow}>
               Conditions générales de ventes
             </span>
+            <p>Siret: 92979581300013</p>
             <p>
               © 2024 - Site développé par{' '}
               <a
