@@ -1,93 +1,109 @@
 .price-content {
-    .text-container {
-      background-color: rgba(255, 245, 235, 1);
-      border-radius: 0 0 100% 100%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      margin-bottom: 40px;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-    }
-  
-    .text-content {
-      text-align: center;
-  
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-    }
-  
-    .tabs {
-      display: flex;
-      justify-content: center;
+  .text-container {
+    background-color: rgba(255, 245, 235, 1);
+    border-radius: 0 0 100% 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .text-content {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
-  
-      .tab {
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: rgba(255, 245, 235, 1);
-        border-radius: 10px;
-        margin: 0 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  
-        &.active {
-          background-color: rgba(220, 200, 180, 1);
-        }
-      }
     }
-  
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1500px;
-      margin: 0 auto;
-  
-      .card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: rgba(255, 245, 235, 1);
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        width: 700px;
-        margin: 10px;
-  
-        .card-image {
-          width: 350px;
-          height: 240px; /* Fix the height to match the width */
-          object-fit: cover; /* Ensure the image covers the area */
-          border-radius: 10px;
-          margin-right: 20px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-  
-        .card-text {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-  
-          h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-          }
-  
-          p {
-            margin: 5px 0;
-            text-align: center;
-          }
-        }
-      }
-  
-      .single-card {
-        width: calc(100% - 20px); /* Center the single card on the second row */
-        max-width: 700px; /* Adjust the max-width as needed */
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: rgba(255, 245, 235, 1);
+      border-radius: 10px;
+      margin: 0 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+      &.active {
+        background-color: rgba(220, 200, 180, 1);
       }
     }
   }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: rgba(255, 245, 235, 1);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      width: 700px;
+      margin: 10px;
+
+      .card-image {
+        width: 350px;
+        height: 240px; /* Fix the height to match the width */
+        object-fit: cover; /* Ensure the image covers the area */
+        border-radius: 10px;
+        margin-right: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .card-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          font-size: 1.3rem;
+        }
+
+        p {
+          margin: 5px 0;
+          text-align: center;
+        }
+
+        button {
+          margin-top: 10px;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background-color: rgba(220, 200, 180, 1);
+          color: black;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: rgba(200, 180, 160, 1);
+          }
+        }
+      }
+    }
+
+    .single-card {
+      width: calc(100% - 20px); /* Center the single card on the second row */
+      max-width: 700px; /* Adjust the max-width as needed */
+    }
+  }
+}
