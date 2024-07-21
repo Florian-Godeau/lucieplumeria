@@ -11,38 +11,61 @@
     text-align: center;
   }
 
-  .nav-link {
-    margin: 0 15px;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
+  .custom-nav-link {
+    position: relative;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
+    color: #000; // Couleur de base
+    text-decoration: none; // Assure que les liens ne sont pas soulignés
+
+    &:hover {
+      color: #555; // Légère différence au hover
+      transform: scale(1.05);
+      text-decoration: none; // Assure que les liens ne sont pas soulignés au hover
+    }
+
+    &.active-link {
+      color: #000 !important; // Couleur similaire à la couleur de base pour la page active
+      font-weight: bold;
+      text-decoration: none; // Assure que les liens ne sont pas soulignés quand ils sont actifs
+      transform: scale(1.1); // Légère augmentation de la taille pour la page active
+    }
   }
 
   .logo {
     width: 190px;
     height: auto;
-    margin-right: 20px; // Adjust spacing as needed
-  }
-
-  .instagram-logo {
-    width: 50px; // Adjust size as needed
-    height: auto;
-    margin-right: 10px;
-  }
-
-  .linkedIn-logo {
-    width: 50px; // Adjust size as needed
-    height: auto;
-    margin-right: 10px;
-  }
-
-  .youtube-logo {
-    width: 60px; // Adjust size as needed
-    height: auto;
-    margin-right: 10px;
+    margin-right: 20px;
+    padding-left: 15px;
   }
 
   .logo-nav {
-    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none; // Assure que les liens ne sont pas soulignés
+
+    &:hover {
+      transform: scale(1.2);
+      color: #555; // Changement de couleur au hover
+      text-decoration: none; // Assure que les liens ne sont pas soulignés au hover
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .instagram-logo,
+  .linkedIn-logo,
+  .youtube-logo {
+    width: 30px; // Adjust size as needed
+    height: auto;
+    margin-left: 10px; // Adjust spacing as needed
   }
 }

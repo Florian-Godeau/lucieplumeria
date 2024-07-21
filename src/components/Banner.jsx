@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 function Banner({ src }) {
+  const [imageSrc, setImageSrc] = useState(src);
+
+  useEffect(() => {
+    setImageSrc(src);
+  }, [src]);
+
   return (
     <div className="banner">
-      <img src={src} alt="Banner" className="banner-image" />
+      <img src={imageSrc} alt="Banner" className="banner-image" />
     </div>
   );
 }

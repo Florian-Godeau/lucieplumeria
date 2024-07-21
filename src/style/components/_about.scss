@@ -12,6 +12,8 @@
   
     .text-content {
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
   
       h1 {
         font-size: 2.5rem;
@@ -23,7 +25,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      background-color: rgba(250, 229, 208, 1); // Same as body background color
+      background-color: rgba(255, 245, 235, 1);
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       margin: 0 auto; // Center the card
@@ -31,16 +33,25 @@
       padding: 20px;
       
       .card-image {
-        width: 200px;
+        width: 350px;
         height: auto;
         border-radius: 10px;
         margin-right: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
   
       .card-text {
         flex: 1;
         font-size: 1.2rem;
         line-height: 1.5;
+        text-align: center;
       }
     }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
   }
