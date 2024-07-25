@@ -1,22 +1,29 @@
+// Définition des breakpoints
+$breakpoint-small: 576px;   // Mobile portrait
+$breakpoint-medium: 768px;  // Tablette portrait
+$breakpoint-large: 1024px;  // Tablette paysage
+$breakpoint-inter: 1200px;
+$breakpoint-xlarge: 1366px; // Tablette/ordinateur portable paysage
+$breakpoint-custom: 992px; // Personnalisé pour les besoins spécifiques
+
+// Mixin pour le responsive
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == small {
-      @media (max-width: 576px) { @content; }
-    }
-    @else if $breakpoint == medium {
-      @media (max-width: 768px) { @content; }
-    }
-    @else if $breakpoint == large {
-      @media (max-width: 1024px) { @content; }
-    }
-    @else if $breakpoint == inter {
-      @media (max-width: 1200px) { @content; }
-    }
-    @else if $breakpoint == xlarge {
-      @media (max-width: 1366px) { @content; }
-    }
-    @else if $breakpoint == custom {
-      @media (max-width: 993px) { @content; }
-    }
+  @if $breakpoint == small {
+    @media (max-width: #{$breakpoint-small}) { @content; }
   }
-  
-  
+  @else if $breakpoint == medium {
+    @media (max-width: #{$breakpoint-medium}) { @content; }
+  }
+  @else if $breakpoint == large {
+    @media (max-width: #{$breakpoint-large}) { @content; }
+  }
+  @else if $breakpoint == inter {
+    @media (max-width: #{$breakpoint-inter}) { @content; }
+  }
+  @else if $breakpoint == xlarge {
+    @media (max-width: #{$breakpoint-xlarge}) { @content; }
+  }
+  @else if $breakpoint == custom {
+    @media (max-width: #{$breakpoint-custom}) { @content; }
+  }
+}
