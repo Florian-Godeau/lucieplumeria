@@ -17,7 +17,7 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto d-flex align-items-center">
+          <Nav className="mx-auto d-flex align-items-center nav-link">
             <Nav.Link as={Link} to="/" className={location.pathname === '/' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Accueil</Nav.Link>
             <Nav.Link as={Link} to="/about" className={location.pathname === '/about' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Qui suis-je ?</Nav.Link>
             <Nav.Link as={Link} to="/price" className={location.pathname === '/price' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Tarifs</Nav.Link>

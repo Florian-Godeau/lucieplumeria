@@ -7,7 +7,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Home from './page/Home';
 
-AOS.init();
+AOS.init({
+  duration: 1000,
+  easing: 'ease-in-out',
+  once: false,
+  mirror: true,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

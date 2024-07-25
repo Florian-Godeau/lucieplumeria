@@ -2,11 +2,17 @@ import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import Banner from './Banner';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import contactImage from '../assets/images/contact.webp';
 import phoneIcon from '../assets/images/phone.png';
 import mailIcon from '../assets/images/mail.png';
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const form = useRef();
   const location = useLocation();
 
@@ -39,7 +45,7 @@ function Contact() {
           <h1>Contact</h1>
         </div>
       </div>
-      <div className="contact-card">
+      <div className="contact-card" data-aos="flip-up">
         <div className="contact-info">
           <div className="info-item">
             <img src={phoneIcon} alt="Phone" className="icon" />

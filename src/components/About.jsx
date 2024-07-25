@@ -1,10 +1,16 @@
 // src/components/About.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from './Banner';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import aboutImage from '../assets/images/about.webp';
 import lucieImage from '../assets/images/lucie.webp';
 
 function About() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="about-content">
       <Banner src={aboutImage} />
@@ -13,7 +19,7 @@ function About() {
           <h1>Qui suis-je ?</h1>
         </div>
       </div>
-      <div className="card">
+      <div className="card" data-aos="flip-up">
         <img src={lucieImage} alt="Lucie Plumeria" className="card-image" />
         <div className="card-text">
           <p>
