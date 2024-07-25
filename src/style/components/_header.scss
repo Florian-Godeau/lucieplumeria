@@ -14,7 +14,7 @@
   &__brand {
     display: flex;
     align-items: center;
-    margin-right: 50px; // Ajoute de l'espace après le logo
+    margin-right: 50px;
 
     @include respond-to(custom) {
       margin-right: 0;
@@ -38,7 +38,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 auto; // Centre les liens de navigation
+    margin: 0 auto;
     gap: 50px;
 
     @include respond-to(custom) {
@@ -76,13 +76,13 @@
   &__social {
     display: flex;
     align-items: center;
-    margin-left: 50px; // Ajoute de l'espace avant les liens de réseaux sociaux
+    margin-left: 50px;
 
     @include respond-to(custom) {
       margin-left: 0;
-      flex-direction: row; // Change direction to row
-      justify-content: center; // Center the social links
-      width: 100%; // Ensure it takes full width
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
     }
   }
 
