@@ -10,28 +10,28 @@ function Header() {
   const location = useLocation();
 
   return (
-    <Navbar className="navbar-opacity" expand="lg">
-      <Container className="d-flex justify-content-center">
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          <img src={logo} alt="Logo" className="logo" />
+    <Navbar className="header" expand="lg">
+      <Container className="header__container">
+        <Navbar.Brand as={Link} to="/" className="header__brand">
+          <img src={logo} alt="Logo" className="header__logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto d-flex align-items-center nav-link">
-            <Nav.Link as={Link} to="/" className={location.pathname === '/' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Accueil</Nav.Link>
-            <Nav.Link as={Link} to="/about" className={location.pathname === '/about' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Qui suis-je ?</Nav.Link>
-            <Nav.Link as={Link} to="/price" className={location.pathname === '/price' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Tarifs</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className={location.pathname === '/contact' ? 'nav-link custom-nav-link active-link' : 'nav-link custom-nav-link'}>Contact</Nav.Link>
+          <Nav className="header__nav">
+            <Nav.Link as={Link} to="/" className={`header__nav-link ${location.pathname === '/' ? 'header__nav-link--active' : ''}`}>Accueil</Nav.Link>
+            <Nav.Link as={Link} to="/about" className={`header__nav-link ${location.pathname === '/about' ? 'header__nav-link--active' : ''}`}>Qui suis-je ?</Nav.Link>
+            <Nav.Link as={Link} to="/price" className={`header__nav-link ${location.pathname === '/price' ? 'header__nav-link--active' : ''}`}>Tarifs</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className={`header__nav-link ${location.pathname === '/contact' ? 'header__nav-link--active' : ''}`}>Contact</Nav.Link>
           </Nav>
-          <Nav className="d-flex align-items-center">
-            <Nav.Link href="https://www.instagram.com/lucieplumeria/" target="_blank" className="d-flex align-items-center logo-nav">
-              <img src={instagramLogo} alt="Instagram" className="instagram-logo" />
+          <Nav className="header__social">
+            <Nav.Link href="https://www.instagram.com/lucieplumeria/" target="_blank" className="header__social-link">
+              <img src={instagramLogo} alt="Instagram" className="header__social-logo" />
             </Nav.Link>
-            <Nav.Link href="https://www.linkedin.com/in/lucie-plumeria/" target="_blank" className="d-flex align-items-center logo-nav">
-              <img src={linkedinLogo} alt="LinkedIn" className="linkedIn-logo" />
+            <Nav.Link href="https://www.linkedin.com/in/lucie-plumeria/" target="_blank" className="header__social-link">
+              <img src={linkedinLogo} alt="LinkedIn" className="header__social-logo" />
             </Nav.Link>
-            <Nav.Link href="https://www.youtube.com/@LuciePlumeria" target="_blank" className="d-flex align-items-center logo-nav">
-              <img src={youtube} alt="Youtube" className="youtube-logo" />
+            <Nav.Link href="https://www.youtube.com/@LuciePlumeria" target="_blank" className="header__social-link">
+              <img src={youtube} alt="Youtube" className="header__social-logo" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

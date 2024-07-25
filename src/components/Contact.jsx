@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import Banner from './Banner';
+import TitleContent from './TitleContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import contactImage from '../assets/images/contact.webp';
@@ -38,26 +39,25 @@ function Contact() {
   };
 
   return (
-    <div className="contact-content">
+    <div className="contact">
       <Banner src={contactImage} />
-      <div className="text-container">
-        <div className="text-content">
-          <h1>Contact</h1>
-        </div>
-      </div>
-      <div className="contact-card" data-aos="flip-up">
-        <div className="contact-info">
-          <div className="info-item">
-            <img src={phoneIcon} alt="Phone" className="icon" />
+      <TitleContent 
+        title="Contact" 
+        subtitle=""
+      />
+      <div className="contact__card" data-aos="flip-up">
+        <div className="contact__info">
+          <div className="contact__info-item">
+            <img src={phoneIcon} alt="Phone" className="contact__icon" />
             <p>07 57 87 65 34</p>
           </div>
-          <div className="info-item">
-            <img src={mailIcon} alt="Mail" className="icon" />
+          <div className="contact__info-item">
+            <img src={mailIcon} alt="Mail" className="contact__icon" />
             <p>lucieplumeria@gmail.com</p>
           </div>
         </div>
-        <div className="locations">
-          <div className="location">
+        <div className="contact__locations">
+          <div className="contact__location">
             <h3>Voiron</h3>
             <p>12 rue Ferrer 38500 Voiron</p>
             <iframe
@@ -69,7 +69,7 @@ function Contact() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="location">
+          <div className="contact__location">
             <h3>Tullins</h3>
             <p>1 montée Pinet 38210 Tullins</p>
             <iframe
@@ -82,7 +82,7 @@ function Contact() {
             ></iframe>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail} className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
           <select name="contact_reason" id="contact_reason" required>
             <option value="">Pourquoi me contactez-vous?</option>
             <option value="Demande d'information">Demande d'information</option>

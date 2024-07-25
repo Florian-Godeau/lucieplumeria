@@ -10,7 +10,7 @@ function Banner({ src }) {
 
   return (
     <div className="banner">
-      <img src={imageSrc} alt="Banner" className="banner-image" />
+      <img src={imageSrc} alt="Banner" className="banner__image" />
     </div>
   );
 }

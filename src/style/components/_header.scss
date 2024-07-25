@@ -1,61 +1,102 @@
-.navbar-opacity {
+.header {
   width: 100%;
 
-  .container {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to(custom) {
+      flex-direction: column;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    margin-right: 50px; // Ajoute de l'espace après le logo
+
+    @include respond-to(custom) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__logo {
+    width: 190px;
+    height: auto;
+    padding-left: 15px;
+
+    @include respond-to(large) {
+      width: 150px;
+      padding-left: 0;
+    }
+  }
+
+  &__nav {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .navbar-nav {
     text-align: center;
-  }
-
-  .nav-link {
+    margin: 0 auto; // Centre les liens de navigation
     gap: 50px;
+
+    @include respond-to(custom) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
-  .custom-nav-link {
+  &__nav-link {
     position: relative;
     padding: 10px 15px;
     font-size: 1.2rem;
     transition: color 0.3s, transform 0.3s;
-    color: #000; // Couleur de base
-    text-decoration: none; // Assure que les liens ne sont pas soulignés
+    color: #000;
+    text-decoration: none;
+
+    @include respond-to(inter) {
+      font-size: 1rem;
+    }
 
     &:hover {
-      color: #555; // Légère différence au hover
+      color: #555;
       transform: scale(1.05);
-      text-decoration: none; // Assure que les liens ne sont pas soulignés au hover
+      text-decoration: none;
     }
 
-    &.active-link {
-      color: #000 !important; // Couleur similaire à la couleur de base pour la page active
+    &--active {
+      color: #000 !important;
       font-weight: bold;
-      text-decoration: none; // Assure que les liens ne sont pas soulignés quand ils sont actifs
-      transform: scale(1.1); // Légère augmentation de la taille pour la page active
+      text-decoration: none;
+      transform: scale(1.1);
     }
   }
 
-  .logo {
-    width: 190px;
-    height: auto;
-    margin-right: 20px;
-    padding-left: 15px;
-  }
-
-  .logo-nav {
+  &__social {
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 50px; // Ajoute de l'espace avant les liens de réseaux sociaux
+
+    @include respond-to(custom) {
+      margin-left: 0;
+      flex-direction: row; // Change direction to row
+      justify-content: center; // Center the social links
+      width: 100%; // Ensure it takes full width
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    text-decoration: none; // Assure que les liens ne sont pas soulignés
+    text-decoration: none;
 
     &:hover {
       transform: scale(1.2);
-      color: #555; // Changement de couleur au hover
-      text-decoration: none; // Assure que les liens ne sont pas soulignés au hover
+      color: #555;
+      text-decoration: none;
     }
 
     img {
@@ -65,11 +106,8 @@
     }
   }
 
-  .instagram-logo,
-  .linkedIn-logo,
-  .youtube-logo {
-    width: 30px; // Adjust size as needed
+  &__social-logo {
+    width: 30px;
     height: auto;
-    margin-left: 10px; // Adjust spacing as needed
   }
 }

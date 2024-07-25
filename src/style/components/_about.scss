@@ -1,57 +1,28 @@
-.about-content {
-    .text-container {
-      background-color: rgba(255, 245, 235, 1);
-      border-radius: 0 0 100% 100%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      margin-bottom: 40px;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-    }
-  
-    .text-content {
-      text-align: center;
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-  
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-    }
-  
-    .card {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background-color: rgba(255, 245, 235, 1);
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      margin: 0 auto; // Center the card
-      max-width: 1200px;
-      padding: 20px;
-      
-      .card-image {
-        width: 350px;
-        height: auto;
-        border-radius: 10px;
-        margin-right: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-  
-      .card-text {
-        flex: 1;
-        font-size: 1.2rem;
-        line-height: 1.5;
-        text-align: center;
-      }
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
+.about {
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 245, 235, 1);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; // Center the card
+    max-width: 1200px;
+    padding: 20px;
   }
+
+  &__card-image {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &__card-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+}

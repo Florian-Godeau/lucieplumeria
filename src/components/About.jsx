@@ -1,6 +1,6 @@
-// src/components/About.jsx
 import React, { useEffect } from 'react';
 import Banner from './Banner';
+import TitleContent from './TitleContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import aboutImage from '../assets/images/about.webp';
@@ -12,16 +12,15 @@ function About() {
   }, []);
 
   return (
-    <div className="about-content">
+    <div className="about">
       <Banner src={aboutImage} />
-      <div className="text-container">
-        <div className="text-content">
-          <h1>Qui suis-je ?</h1>
-        </div>
-      </div>
-      <div className="card" data-aos="flip-up">
-        <img src={lucieImage} alt="Lucie Plumeria" className="card-image" />
-        <div className="card-text">
+      <TitleContent 
+        title="Qui suis-je ?" 
+        subtitle=""
+      />
+      <div className="about__card" data-aos="flip-up">
+        <img src={lucieImage} alt="Lucie Plumeria" className="about__card-image" />
+        <div className="about__card-text">
           <p>
             À cœur de comprendre la complexité de l'être humain et de favoriser son bien-être, j'ai emprunté un chemin de découverte et de transformation personnelle. Se connaître pleinement et atteindre une paix intérieure sont les raisons profondes qui m'ont poussée à m'engager dans un véritable voyage intérieur, enrichi par diverses pratiques et disciplines. Convaincue que le travail sur soi est indispensable pour aider les autres, je me suis dotée de cette devise fondamentale : c'est en explorant et en harmonisant notre propre être que nous pouvons véritablement soutenir ceux qui nous entourent.
           </p>
