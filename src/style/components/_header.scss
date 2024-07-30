@@ -31,6 +31,11 @@
       width: 150px;
       padding-left: 0;
     }
+
+    @include respond-to(custom) {
+      width: 250px;
+      padding-left: 0;
+    }
   }
 
   &__nav {
@@ -43,7 +48,7 @@
 
     @include respond-to(custom) {
       flex-direction: column;
-      gap: 20px;
+      gap: 0;
     }
   }
 
@@ -57,6 +62,10 @@
 
     @include respond-to(inter) {
       font-size: 1rem;
+    }
+
+    @include respond-to(custom) {
+      font-size: 2rem;
     }
 
     &:hover {
@@ -80,9 +89,12 @@
 
     @include respond-to(custom) {
       margin-left: 0;
+      margin-top: 10px;
       flex-direction: row;
       justify-content: center;
       width: 100%;
+      gap: 30px;
+
     }
   }
 
@@ -103,6 +115,11 @@
       width: 24px;
       height: 24px;
       transition: transform 0.3s ease-in-out;
+
+      @include respond-to(custom) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 

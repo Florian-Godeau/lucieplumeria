@@ -7,8 +7,13 @@
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     margin: 0 auto; // Center the card
-    max-width: 1200px;
+    max-width: 1160px;
     padding: 20px;
+
+    @include respond-to(inter) {
+      flex-direction: column;
+      margin: 0 20px;
+    }
   }
 
   &__card-image {
@@ -17,6 +22,15 @@
     border-radius: 10px;
     margin-right: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    @include respond-to(inter) {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    @include respond-to(medium) {
+      width: 270px;
+    }
   }
 
   &__card-text {
@@ -24,5 +38,9 @@
     font-size: 1.2rem;
     line-height: 1.5;
     text-align: center;
+
+    @include respond-to(medium) {
+      font-size: 1rem;
+    }
   }
 }

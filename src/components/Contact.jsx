@@ -10,12 +10,33 @@ import phoneIcon from '../assets/images/phone.png';
 import mailIcon from '../assets/images/mail.png';
 
 function Contact() {
+  const form = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      const elements = document.querySelectorAll('[data-aos]');
+      elements.forEach((element) => {
+        if (window.innerWidth <= 1024) {
+          element.setAttribute('data-aos', 'flip-right');
+        } else {
+          element.setAttribute('data-aos', 'flip-up');
+        }
+      });
+      AOS.refresh();
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call it initially to set the correct animation
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
-  const form = useRef();
-  const location = useLocation();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);

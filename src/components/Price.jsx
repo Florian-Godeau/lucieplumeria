@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Banner from './Banner';
 import TitleContent from './TitleContent';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import seanceImage from '../assets/images/seance.webp';
 import individualImage from '../assets/images/individual.webp';
 import collectifImage from '../assets/images/collectif.webp';
@@ -12,12 +10,23 @@ import fiveSeanceImg from '../assets/images/5seance.webp';
 import tenSeanceImg from '../assets/images/10seance.webp';
 
 function Price() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   const [selectedTab, setSelectedTab] = useState('sessions');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Force re-render on tab change to apply animations
+    const cards = document.querySelectorAll('.price__card');
+    cards.forEach((card) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+    });
+    setTimeout(() => {
+      cards.forEach((card) => {
+        card.style.opacity = '';
+        card.style.transform = '';
+      });
+    }, 100);
+  }, [selectedTab]);
 
   const handleContactClick = (reason) => {
     navigate(`/contact?reason=${encodeURIComponent(reason)}`);
@@ -25,14 +34,11 @@ function Price() {
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
-    setTimeout(() => {
-      AOS.refresh();
-    }, 100); // Réinitialise les animations AOS pour les nouveaux éléments
   };
 
   const renderSessions = () => (
     <div className="price__cards-container">
-      <div className="price__card" key="session1" data-aos="flip-right" data-aos-offset="100">
+      <div className="price__card" key="session1">
         <img src={individualImage} alt="Séance Individuelle" className="price__card-image" />
         <div className="price__card-text">
           <h3>Séance Individuelle</h3>
@@ -42,7 +48,7 @@ function Price() {
           <button onClick={() => handleContactClick('Réservation séance individuelle / Formules')}>Réservation / Contact</button>
         </div>
       </div>
-      <div className="price__card" key="session2" data-aos="flip-right" data-aos-offset="100">
+      <div className="price__card" key="session2">
         <img src={collectifImage} alt="Séance Collective" className="price__card-image" />
         <div className="price__card-text">
           <h3>Séance Collective</h3>
@@ -51,7 +57,7 @@ function Price() {
           <button onClick={() => handleContactClick('Réservation séance collective')}>Réservation / Contact</button>
         </div>
       </div>
-      <div className="price__card price__card--single" key="session3" data-aos="flip-right" data-aos-offset="100">
+      <div className="price__card price__card--single" key="session3">
         <img src={entrepriseImage} alt="Séance en Entreprise" className="price__card-image" />
         <div className="price__card-text">
           <h3>Séance en Entreprise</h3>
@@ -65,7 +71,7 @@ function Price() {
 
   const renderFormulas = () => (
     <div className="price__cards-container">
-      <div className="price__card" key="formula1" data-aos="flip-right" data-aos-offset="100">
+      <div className="price__card" key="formula1">
         <img src={fiveSeanceImg} alt="5 séances" className="price__card-image" />
         <div className="price__card-text">
           <h3>Forfait 5 séances</h3>
@@ -76,7 +82,7 @@ function Price() {
           <button onClick={() => handleContactClick('Réservation séance individuelle / Formules')}>Réservation / Contact</button>
         </div>
       </div>
-      <div className="price__card" key="formula2" data-aos="flip-right" data-aos-offset="100">
+      <div className="price__card" key="formula2">
         <img src={tenSeanceImg} alt="10 séances" className="price__card-image" />
         <div className="price__card-text">
           <h3>Forfait 10 séances</h3>
@@ -93,15 +99,18 @@ function Price() {
   return (
     <div className="price">
       <Banner src={seanceImage} />
-      <TitleContent 
-        title="Tarifs" 
-        subtitle=""
-      />
+      <TitleContent title="Tarifs" subtitle="" />
       <div className="price__tabs">
-        <div className={`price__tab ${selectedTab === 'sessions' ? 'price__tab--active' : ''}`} onClick={() => handleTabClick('sessions')}>
+        <div
+          className={`price__tab ${selectedTab === 'sessions' ? 'price__tab--active' : ''}`}
+          onClick={() => handleTabClick('sessions')}
+        >
           Séances
         </div>
-        <div className={`price__tab ${selectedTab === 'formulas' ? 'price__tab--active' : ''}`} onClick={() => handleTabClick('formulas')}>
+        <div
+          className={`price__tab ${selectedTab === 'formulas' ? 'price__tab--active' : ''}`}
+          onClick={() => handleTabClick('formulas')}
+        >
           Formules
         </div>
       </div>

@@ -8,6 +8,27 @@ import lucieImage from '../assets/images/lucie.webp';
 
 function About() {
   useEffect(() => {
+    const handleResize = () => {
+      const elements = document.querySelectorAll('[data-aos]');
+      elements.forEach((element) => {
+        if (window.innerWidth <= 768) {
+          element.setAttribute('data-aos', 'flip-right');
+        } else {
+          element.setAttribute('data-aos', 'flip-up');
+        }
+      });
+      AOS.refresh();
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call it initially to set the correct animation
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 

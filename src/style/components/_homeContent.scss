@@ -8,6 +8,10 @@
     gap: 10px; // Add space between the columns
     margin: auto;
     max-width: 1300px;
+
+    @include respond-to(custom) {
+      display: none; // Hide columns on smaller screens
+    }
   }
 
   .home-content__column {
@@ -28,6 +32,10 @@
       margin-bottom: 15px;
       text-align: center; // Center titles horizontally
       width: 100%; // Ensure titles take full width
+
+      @include respond-to(large) {
+        font-size: 1.5rem;
+      }
     }
 
     &-content {
@@ -46,10 +54,41 @@
       line-height: 1.5;
       text-align: center;
       width: 100%; // Take up all available horizontal space
+
+      @include respond-to(large) {
+        font-size: 0.9rem;
+      }
     }
   }
 
   .home-content__column--middle {
     background-color: rgba(220, 200, 180, 1); // Slightly darker background color
+  }
+
+  .home-content__accordions {
+    display: none; // Hide accordions on larger screens
+    padding-top: 30px;
+    margin: 0 15px;
+
+    @include respond-to(custom) {
+      display: block; // Show accordions on smaller screens
+
+      .card {
+        margin-bottom: 10px;
+
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgba(255, 245, 235, 1);
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        .card-body {
+          background-color: rgba(255, 245, 235, 1);
+        }
+      }
+    }
   }
 }
