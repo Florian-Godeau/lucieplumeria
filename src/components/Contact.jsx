@@ -82,6 +82,7 @@ function Contact() {
             <h3>Voiron</h3>
             <p>12 rue Ferrer 38500 Voiron</p>
             <iframe
+              title='Voiron'
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.2456796208395!2d5.585258215556004!3d45.36417297910008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478afe63274c41c5%3A0x2912b74ff45e1d1e!2s12%20Rue%20Ferrer%2C%2038500%20Voiron!5e0!3m2!1sfr!2sfr!4v1620314102903!5m2!1sfr!2sfr"
               width="300"
               height="200"
@@ -94,6 +95,7 @@ function Contact() {
             <h3>Tullins</h3>
             <p>1 montée Pinet 38210 Tullins</p>
             <iframe
+              title='Tullins'
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.2456796208395!2d5.585258215556004!3d45.36417297910008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b9a678cf9b64b%3A0x23d8e2f8d9e7b36!2s1%20Mont%C3%A9e%20Pinet%2C%2038210%20Tullins!5e0!3m2!1sfr!2sfr!4v1620314176882!5m2!1sfr!2sfr"
               width="300"
               height="200"
