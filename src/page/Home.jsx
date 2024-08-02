@@ -24,7 +24,7 @@ function Home() {
                 <meta property="og:title" content="Accueil - Lucie Plumeria" />
                 <meta property="og:description" content="Bienvenue sur le site de Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
                 <meta property="og:image" content="/Luciereseaux.webp" />
-                <meta property="og:url" content="https://votre-site.com" />
+                <meta property="og:url" content="https://testsophlu.netlify.app" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Accueil - Lucie Plumeria" />
                 <meta name="twitter:description" content="Bienvenue sur le site de Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
@@ -34,7 +34,7 @@ function Home() {
                     {
                       "@context": "https://schema.org",
                       "@type": "WebSite",
-                      "url": "https://votre-site.com",
+                      "url": "https://testsophlu.netlify.app",
                       "name": "Lucie Plumeria - Sophrologue",
                       "description": "Bienvenue sur le site de Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions.",
                       "publisher": {
@@ -64,7 +64,7 @@ function Home() {
                 <meta property="og:title" content="Qui suis-je ? - Lucie Plumeria" />
                 <meta property="og:description" content="Découvrez qui est Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
                 <meta property="og:image" content="/Luciereseaux.webp" />
-                <meta property="og:url" content="https://votre-site.com/about" />
+                <meta property="og:url" content="https://testsophlu.netlify.app/about" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Qui suis-je ? - Lucie Plumeria" />
                 <meta name="twitter:description" content="Découvrez qui est Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
@@ -75,7 +75,7 @@ function Home() {
                       "@context": "https://schema.org",
                       "@type": "Person",
                       "name": "Lucie Plumeria",
-                      "url": "https://votre-site.com/about",
+                      "url": "https://testsophlu.netlify.app/about",
                       "image": "/Luciereseaux.webp",
                       "description": "Découvrez qui est Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions.",
                       "jobTitle": "Sophrologue",
@@ -102,7 +102,7 @@ function Home() {
                 <meta property="og:title" content="Tarifs - Lucie Plumeria" />
                 <meta property="og:description" content="Découvrez les tarifs des séances individuelles, collectives et en entreprise avec Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
                 <meta property="og:image" content="/Luciereseaux.webp" />
-                <meta property="og:url" content="https://votre-site.com/price" />
+                <meta property="og:url" content="https://testsophlu.netlify.app/price" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Tarifs - Lucie Plumeria" />
                 <meta name="twitter:description" content="Découvrez les tarifs des séances individuelles, collectives et en entreprise avec Lucie Plumeria, sophrologue spécialisée dans la gestion du stress et des émotions." />
@@ -118,7 +118,7 @@ function Home() {
                         "name": "Lucie Plumeria",
                         "image": "/Luciereseaux.webp",
                         "description": "Sophrologue spécialisée dans la gestion du stress et des émotions.",
-                        "url": "https://votre-site.com/about"
+                        "url": "https://testsophlu.netlify.app/about"
                       },
                       "areaServed": {
                         "@type": "Place",
@@ -143,7 +143,7 @@ function Home() {
                 <meta property="og:title" content="Contact - Lucie Plumeria" />
                 <meta property="og:description" content="Contactez Lucie Plumeria pour toute demande d'information, réservation de séance individuelle, collective ou en entreprise." />
                 <meta property="og:image" content="/Luciereseaux.webp" />
-                <meta property="og:url" content="https://votre-site.com/contact" />
+                <meta property="og:url" content="https://testsophlu.netlify.app/contact" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Contact - Lucie Plumeria" />
                 <meta name="twitter:description" content="Contactez Lucie Plumeria pour toute demande d'information, réservation de séance individuelle, collective ou en entreprise." />
@@ -153,7 +153,7 @@ function Home() {
                     {
                       "@context": "https://schema.org",
                       "@type": "ContactPage",
-                      "url": "https://votre-site.com/contact",
+                      "url": "https://testsophlu.netlify.app/contact",
                       "description": "Contactez Lucie Plumeria pour toute demande d'information, réservation de séance individuelle, collective ou en entreprise."
                     }
                   `}
