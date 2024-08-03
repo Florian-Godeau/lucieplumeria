@@ -28,7 +28,7 @@ function HomeContent() {
 
   return (
     <div className="home-content">
-      <Banner src={sunflower} alt="Sunflower Banner" />
+      <Banner src={sunflower} />
       <TitleContent 
         title="Bienvenue" 
         subtitle="Vous vous demandez peut-être ce qu'est la sophrologie, en quoi consiste t-elle, et qu'apporte t-elle dans votre quotidien ?" 
