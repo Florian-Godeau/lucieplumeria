@@ -49,11 +49,13 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+    emailjs.sendForm('service_o3squg8', 'template_23hr157', form.current, 'ZH2hDI6_HGQa2DYu3')
       .then((result) => {
           console.log(result.text);
+          alert('Votre message à bien été envoyé !');
       }, (error) => {
           console.log(error.text);
+          alert('Erreur, veuillez réessayer ultérieurement.');
       });
 
     e.target.reset();
@@ -109,9 +111,9 @@ function Contact() {
           <select name="contact_reason" id="contact_reason" required>
             <option value="">Pourquoi me contactez-vous?</option>
             <option value="Demande d'information">Demande d'information</option>
-            <option value="Réservation séance individuelle / Formules">Réservation séance individuelle / Formules</option>
+            <option value="Réservation séance individuelle ou Formules">Réservation séance individuelle ou Formules</option>
             <option value="Réservation séance collective">Réservation séance collective</option>
-            <option value="Réservation / Demande séance en entreprise">Réservation / Demande séance en entreprise</option>
+            <option value="Réservation ou Demande d'information séance en entreprise">Réservation ou Demande d'information séance en entreprise</option>
           </select>
           
           <select name="location" id="location" required>
