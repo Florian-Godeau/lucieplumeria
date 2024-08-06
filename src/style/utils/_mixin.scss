@@ -3,6 +3,7 @@ $breakpoint-small: 576px;   // Mobile portrait
 $breakpoint-medium: 768px;  // Tablette portrait
 $breakpoint-large: 1024px;  // Tablette paysage
 $breakpoint-inter: 1200px;
+$breakpoint-interplus : 1300px;
 $breakpoint-xlarge: 1366px; // Tablette/ordinateur portable paysage
 $breakpoint-custom: 992px; // Personnalisé pour les besoins spécifiques
 
@@ -19,6 +20,9 @@ $breakpoint-custom: 992px; // Personnalisé pour les besoins spécifiques
   }
   @else if $breakpoint == inter {
     @media (max-width: #{$breakpoint-inter}) { @content; }
+  }
+  @else if $breakpoint == interplus {
+    @media (max-width: #{$breakpoint-interplus}) { @content; }
   }
   @else if $breakpoint == xlarge {
     @media (max-width: #{$breakpoint-xlarge}) { @content; }

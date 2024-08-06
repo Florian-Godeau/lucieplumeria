@@ -44,14 +44,14 @@ function HomeContent() {
         <div className="home-content__column home-content__column--middle" data-aos="flip-right" data-aos-offset="200">
           <h2>Pour qui ? Pour quoi ?</h2>
           <div className="home-content__column-content">
-            <p>Pour toute personne souhaitant mettre en lumière ses différents troubles et les appréhender au mieux : que soit la gestion du stress/des émotions, d'une phobie, de retrouver un sommeil harmonieux, de retrouver confiance en soi, de se préparer à un évènement, ou simplement pour se reconnecter à une une respiration paisible ; tout ça dans le but de pouvoir se ressourcer quand vous le souhaitez dans votre quotidien. Je suis là pour vous apporter différentes clefs vous permettant ensuite de les utiliser pour vous afin de vous retrouver sereinement.</p>
+          <p>Pour toute personne souhaitant mettre en lumière ses différents troubles et les appréhender au mieux : que ce soit la gestion du stress, des émotions, d'une phobie, de retrouver un sommeil harmonieux, de retrouver confiance en soi, de se préparer à un évènement, ou simplement pour se reconnecter à une une respiration paisible ; tout ça dans le but de pouvoir se ressourcer quand vous le souhaitez dans votre quotidien. Mon rôle est de vous fournir les clés pour vous permettre de vous retrouver paisiblement.</p>
           </div>
         </div>
         <div className="home-content__column" data-aos="flip-right" data-aos-offset="200">
           <h2>Mes outils</h2>
           <div className="home-content__column-content">
-            <p>Spécialisée dans la gestion du stress et de l'émotion, c'est avec une attention encore plus particulière que je vous aiderais à aller au delà de vos peurs afin de trouver cette sérénité qui est présente en vous et qui ne demande qu'à être mise en lumière.</p>
-            <p>Spécialisée également en entreprise, mon objectif est de contribuer à l'épanouissement professionnel et personnel de votre équipe, en proposant des séances adaptées aux besoins de chacun. Ensemble, nous pouvons créer un environnement de travail plus serein et plus productif.</p>
+          <p>Spécialisée dans la gestion du stress et de l'émotion, c'est avec une attention encore plus particulière que je vous aiderais à aller au delà de vos peurs afin de trouver cette sérénité qui est présente en vous et qui ne demande qu'à être mise en lumière.</p>
+          <p>Spécialisée également en entreprise, mon objectif est de contribuer à l'épanouissement professionnel et personnel de votre équipe, en proposant des séances adaptées aux besoins de chacun. Ensemble, nous pouvons créer un environnement de travail plus serein et plus productif.</p>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ function HomeContent() {
             <CustomToggle eventKey="1">Pour qui ? Pour quoi ?</CustomToggle>
             <Accordion.Collapse eventKey="1">
               <Card.Body>
-                <p>Pour toute personne souhaitant mettre en lumière ses différents troubles et les appréhender au mieux : que soit la gestion du stress/des émotions, d'une phobie, de retrouver un sommeil harmonieux, de retrouver confiance en soi, de se préparer à un évènement, ou simplement pour se reconnecter à une une respiration paisible ; tout ça dans le but de pouvoir se ressourcer quand vous le souhaitez dans votre quotidien. Je suis là pour vous apporter différentes clefs vous permettant ensuite de les utiliser pour vous afin de vous retrouver sereinement.</p>
+                <p>Pour toute personne souhaitant mettre en lumière ses différents troubles et les appréhender au mieux : que ce soit la gestion du stress, des émotions, d'une phobie, de retrouver un sommeil harmonieux, de retrouver confiance en soi, de se préparer à un évènement, ou simplement pour se reconnecter à une une respiration paisible ; tout ça dans le but de pouvoir se ressourcer quand vous le souhaitez dans votre quotidien. Mon rôle est de vous fournir les clés pour vous permettre de vous retrouver paisiblement.</p>
               </Card.Body>
             </Accordion.Collapse>
           </Card>

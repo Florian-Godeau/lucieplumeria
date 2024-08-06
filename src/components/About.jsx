@@ -43,13 +43,19 @@ function About() {
         <img src={lucieImage} alt="Lucie Plumeria" className="about__card-image" />
         <div className="about__card-text">
           <p>
-            À cœur de comprendre la complexité de l'être humain et de favoriser son bien-être, j'ai emprunté un chemin de découverte et de transformation personnelle. Se connaître pleinement et atteindre une paix intérieure sont les raisons profondes qui m'ont poussée à m'engager dans un véritable voyage intérieur, enrichi par diverses pratiques et disciplines. Convaincue que le travail sur soi est indispensable pour aider les autres, je me suis dotée de cette devise fondamentale : c'est en explorant et en harmonisant notre propre être que nous pouvons véritablement soutenir ceux qui nous entourent.
+            Depuis toujours, j'ai nourri un profond désir de comprendre l'être humain, tant de l'intérieur que de l'extérieur. Mon parcours a commencé par plusieurs années de théâtre, une discipline qui m'a permis d'explorer mes propres émotions en profondeur. En jouant, en comprenant et en exprimant ces émotions, j'ai pu incarner des personnages avec authenticité, découvrant ainsi la vérité de chaque rôle que j'endossais sur scène.
           </p>
           <p>
-            Aujourd'hui, je suis comblée de posséder un éventail d'outils diversifiés qui me permettent d'offrir une aide précieuse et quotidienne à chacun. Mon objectif ultime est de semer la sérénité et la paix, afin que vous puissiez vous épanouir pleinement et retrouver une confiance inébranlable en vous-même. Dotée d'une curiosité insatiable et d'une empathie naturelle, je m'engage à être une oreille attentive et bienveillante, prête à illuminer les zones d'ombre de votre être et à révéler la lumière intérieure qui ne demande qu'à briller.
+            Ensuite, j'ai dirigé mon attention vers l'extérieur en devenant ambulancière. Ce rôle m'a offert une perspective précieuse sur le corps humain, ses signaux et les manifestations de la maladie. J'ai appris à écouter les signes du corps et à répondre aux besoins immédiats des patients, cherchant toujours à leur apporter un soulagement maximal.
           </p>
           <p>
-            Il me tient à cœur de vous guider vers une connexion authentique avec votre essence véritable, vous permettant ainsi de rayonner dans la vie que vous méritez pleinement. Je serais honorée de vous accompagner sur ce chemin de découverte de soi, vous aidant à accéder à cette paix intérieure et à cette harmonie qui transformeront votre quotidien. Ensemble, nous ouvrirons la porte à une vie riche de sens et de plénitude, où votre véritable potentiel pourra s'épanouir et s'exprimer librement.
+            Ces expériences ont éveillé en moi le désir profond d'aider les autres à découvrir leur lumière intérieure et à exploiter leur potentiel infini. J'ai donc entrepris un véritable chemin de développement personnel, enrichi par diverses pratiques et disciplines. Convaincue que le travail sur soi est essentiel pour pouvoir aider autrui, j'ai adopté la devise suivante : en explorant et en harmonisant notre propre être, nous sommes véritablement capables de soutenir ceux qui nous entourent.
+          </p>
+          <p>
+            Aujourd'hui, je suis heureuse de pouvoir offrir une aide précieuse et quotidienne grâce à un éventail d'outils diversifiés. Mon objectif ultime est de vous voir rayonner librement, afin que chacun puisse s'épanouir et retrouver une confiance inébranlable en soi. Dotée d'une curiosité insatiable et d'une empathie naturelle, je m'engage à être une oreille attentive et bienveillante. Mon ambition est d'illuminer les zones d'ombre de votre être et de révéler votre lumière intérieure qui ne demande qu'à briller.
+          </p>
+          <p>
+            Il me tient à cœur de vous guider vers une connexion authentique avec votre essence véritable, vous permettant de rayonner dans la vie que vous méritez pleinement. Je serais honorée de vous accompagner sur ce chemin de découverte de soi, vous aidant à accéder à cette paix intérieure et à cette harmonie qui transformeront votre quotidien.
           </p>
         </div>
       </div>

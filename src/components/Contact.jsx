@@ -80,8 +80,8 @@ function Contact() {
           </div>
         </div>
         <div className="contact__locations">
-          <div className="contact__location">
-            <h3>Voiron</h3>
+          <div className="contact__locations__location">
+            <h3>Voiron, <br />Cabinet La Bulle à Soie</h3>
             <p>12 rue Ferrer 38500 Voiron</p>
             <iframe
               title='Voiron'
@@ -93,8 +93,8 @@ function Contact() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="contact__location">
-            <h3>Tullins</h3>
+          <div className="contact__locations__location">
+            <h3>Tullins, <br />Cabinet de Kinésithérapie</h3>
             <p>1 montée Pinet 38210 Tullins</p>
             <iframe
               title='Tullins'

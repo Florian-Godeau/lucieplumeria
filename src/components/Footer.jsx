@@ -38,7 +38,7 @@ function Footer() {
             <p><strong>1. Objet</strong></p>
             <p>Les présentes conditions générales de vente (CGV) régissent les relations contractuelles entre la sophrologue Lucie Plumeria (ci-après désignée "le Prestataire") et toute personne physique ou morale (ci-après désignée "le Client") souhaitant bénéficier des services de sophrologie proposés par le Prestataire.</p>
             <p><strong>2. Prestations de Services</strong></p>
-            <p>Le Prestataire propose des séances de sophrologie individuelles et/ou collectives, en cabinet, à domicile ou en ligne. Les détails des prestations (durée, contenu, modalités) sont précisés sur le site internet du Prestataire ou communiqués directement au Client.</p>
+            <p>Le Prestataire propose des séances de sophrologie individuelles et/ou collectives, en cabinet ou en ligne. Les détails des prestations (durée, contenu, modalités) sont précisés sur le site internet du Prestataire ou communiqués directement au Client.</p>
             <p><strong>3. Tarifs</strong></p>
             <p>Les tarifs des prestations sont affichés sur le site internet du Prestataire et peuvent être révisés à tout moment. Les tarifs en vigueur au moment de la réservation s'appliquent. Les tarifs sont exprimés en euros (€) et ne sont pas soumis à la TVA.</p>
             <p><strong>4. Prise de Rendez-vous et Paiement</strong></p>

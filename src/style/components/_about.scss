@@ -7,10 +7,10 @@
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     margin: 0 auto; // Center the card
-    max-width: 1160px;
+    max-width: 1260px;
     padding: 20px;
 
-    @include respond-to(inter) {
+    @include respond-to(interplus) {
       flex-direction: column;
       margin: 0 20px;
     }
