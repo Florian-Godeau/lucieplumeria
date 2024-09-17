@@ -41,9 +41,14 @@ function HomeContent() {
     <div className="home-content">
       <Banner src={sunflower} />
       <TitleContent 
-        title="Bienvenue" 
-        subtitle="Vous vous demandez peut-être ce qu'est la sophrologie, en quoi consiste t-elle, et qu'apporte t-elle dans votre quotidien ?" 
-      />
+  title={
+    <>
+      <div style={{ marginBottom: '20px' }}>Lucie Plumeria</div>
+      <div>Sophrologue à Voiron et Tullins</div>
+    </>
+  }  
+/>
+
       <div className="home-content__three-columns">
         <div className="home-content__column" data-aos="flip-right" data-aos-offset="200">
           <h2>Petite histoire...</h2>

@@ -41,7 +41,7 @@ function Price() {
       <div className="price__card" key="session1">
         <img src={individualImage} alt="Séance Individuelle" className="price__card-image" />
         <div className="price__card-text">
-          <h3>Séance Individuelle</h3>
+          <h2>Séance Individuelle</h2>
           <p>1h</p>
           <p>50€</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>
@@ -51,7 +51,7 @@ function Price() {
       <div className="price__card" key="session2">
         <img src={collectifImage} alt="Séance Collective" className="price__card-image" />
         <div className="price__card-text">
-          <h3>Séance Collective</h3>
+          <h2>Séance Collective</h2>
           <p>1h</p>
           <p>20€</p>
           <button onClick={() => handleContactClick('Réservation séance collective')}>Réservation / Contact</button>
@@ -60,8 +60,7 @@ function Price() {
       <div className="price__card price__card--single" key="session3">
         <img src={entrepriseImage} alt="Séance en Entreprise" className="price__card-image" />
         <div className="price__card-text">
-          <h3>Séance en Entreprise</h3>
-          <p>1h</p>
+          <h2>Séance en Entreprise</h2>
           <p>Me contacter</p>
           <button onClick={() => handleContactClick('Réservation / Demande séance en entreprise')}>Réservation / Contact</button>
         </div>
@@ -74,7 +73,7 @@ function Price() {
       <div className="price__card" key="formula1">
         <img src={fiveSeanceImg} alt="5 séances" className="price__card-image" />
         <div className="price__card-text">
-          <h3>Forfait 5 séances</h3>
+          <h2>Forfait 5 séances</h2>
           <p>240€</p>
           <p>Forfait 5 séances avec la première offerte, soit 6 séances à prix tout doux</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>
@@ -85,7 +84,7 @@ function Price() {
       <div className="price__card" key="formula2">
         <img src={tenSeanceImg} alt="10 séances" className="price__card-image" />
         <div className="price__card-text">
-          <h3>Forfait 10 séances</h3>
+          <h2>Forfait 10 séances</h2>
           <p>450€</p>
           <p>Forfait 10 séances avec la première offerte, soit 11 séances à prix tout doux</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>

@@ -1,4 +1,25 @@
 .contact {
+  &__appointment-button {
+    padding: 10px 20px;
+    background-color: rgba(220, 200, 180, 1);
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(200, 180, 160, 1);
+    }
+
+    .contact__icon--button {
+      width: 25px;
+      height: 25px;
+      margin-right: 20px; // Espace entre l'icône et le texte
+    }
+  }
+
   &__card {
     background-color: rgba(255, 245, 235, 1);
     border-radius: 20px;
@@ -56,9 +77,10 @@
       max-width: 500px;
       margin-bottom: 30px;
 
-      h3 {
+      h2 {
         text-align: center;
         margin-bottom: 10px;
+        font-size: 1.4rem;
       }
 
       p {

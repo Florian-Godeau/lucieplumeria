@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import contactImage from '../assets/images/contact.webp';
 import phoneIcon from '../assets/images/phone.png';
 import mailIcon from '../assets/images/mail.png';
+import calendarIcon from '../assets/images/calendrier.png';
 
 function Contact() {
   const form = useRef();
@@ -78,10 +79,19 @@ function Contact() {
             <img src={mailIcon} alt="Mail" className="contact__icon" />
             <p>lucieplumeria@gmail.com</p>
           </div>
+          {/* Ajout du bouton "Prendre rendez-vous en ligne" avec icône */}
+          <div className="contact__info-item">
+            <a href="https://appt.link/meet-with-lucie-plumeria-zQVQNSoI" target="_blank" rel="noopener noreferrer">
+              <button className="contact__appointment-button">
+                <img src={calendarIcon} alt="Calendrier" className="contact__icon--button" />
+                Prendre rendez-vous en ligne
+              </button>
+            </a>
+          </div>
         </div>
         <div className="contact__locations">
           <div className="contact__locations__location">
-            <h3>Voiron, <br />Cabinet La Bulle à Soie</h3>
+            <h2>Voiron <br />Cabinet La Bulle à Soie</h2>
             <p>12 rue Ferrer 38500 Voiron</p>
             <iframe
               title='Voiron'
@@ -94,7 +104,7 @@ function Contact() {
             ></iframe>
           </div>
           <div className="contact__locations__location">
-            <h3>Tullins, <br />Cabinet de Kinésithérapie</h3>
+            <h2>Tullins <br />Cabinet de Kinésithérapie</h2>
             <p>1 montée Pinet 38210 Tullins</p>
             <iframe
               title='Tullins'
@@ -110,10 +120,10 @@ function Contact() {
         <form ref={form} onSubmit={sendEmail} className="contact__form">
           <select name="contact_reason" id="contact_reason" required>
             <option value="">Pourquoi me contactez-vous?</option>
-            <option value="Demande d'information">Demande d'information</option>
-            <option value="Réservation séance individuelle ou Formules">Réservation séance individuelle ou Formules</option>
-            <option value="Réservation séance collective">Réservation séance collective</option>
-            <option value="Réservation ou Demande d'information séance en entreprise">Réservation ou Demande d'information séance en entreprise</option>
+            <option value="Demande d'information générale">Demande d'information générale</option>
+            <option value="Demande d'information séance individuelle ou Formules">Demande d'information séance individuelle ou Formules</option>
+            <option value="Demande d'information séance collective">Demande d'information séance collective</option>
+            <option value="Demande d'information séance en entreprise">Demande d'information séance en entreprise</option>
           </select>
           
           <select name="location" id="location" required>

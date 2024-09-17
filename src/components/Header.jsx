@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, Collapse } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/lucieLogo.webp';
 import instagramLogo from '../assets/images/instagram.png';
+import facebookLogo from '../assets/images/facebook.png';
 import linkedinLogo from '../assets/images/linkedin.png';
 import youtube from '../assets/images/youtube.png';
 
@@ -29,6 +30,9 @@ function Header() {
               <Nav className="header__social">
                 <Nav.Link href="https://www.instagram.com/lucieplumeria/" target="_blank" className="header__social-link">
                   <img src={instagramLogo} alt="Instagram" className="header__social-logo" />
+                </Nav.Link>
+                <Nav.Link href="https://www.facebook.com/profile.php?id=61565588814803" target="_blank" className="header__social-link">
+                  <img src={facebookLogo} alt="Facebook" className="header__social-logo" />
                 </Nav.Link>
                 <Nav.Link href="https://www.linkedin.com/in/lucie-plumeria/" target="_blank" className="header__social-link">
                   <img src={linkedinLogo} alt="LinkedIn" className="header__social-logo" />
