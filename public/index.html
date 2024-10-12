@@ -21,6 +21,10 @@
     <meta name="twitter:description" content="La sophrologie : une méthode douce alliant respiration, visualisation et équilibre pour harmoniser votre bien-être mental et physique." />
     <meta name="twitter:image" content="/Luciereseaux.webp" />
     <meta name="google-site-verification" content="sni57ZCy_BcxKAsZ-IrhzqIPJojV4NghnpYq5hvVLHQ" />
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LetP18qAAAAAKLGyma_THmaa4dFklhH4NAbrNHH"></script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,5 +66,48 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <!-- Bannière de cookies -->
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #000; color: #fff; padding: 20px; text-align: center; z-index: 1000; display: none;">
+      <p style="margin: 0; font-size: 16px;">
+        Nous utilisons des cookies pour améliorer votre expérience sur notre site.
+      </p>
+      <div style="margin-top: 10px;">
+        <button id="accept-cookies" style="background-color: #f1d600; border: none; padding: 10px 20px; cursor: pointer;">
+          Accepter
+        </button>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="javascript:void(0);" id="privacy-link" style="color: #f1d600; text-decoration: underline; cursor: pointer;">
+          Politique de confidentialité
+        </a>
+      </div>
+    </div>
+
+    <!-- Script pour gérer la bannière de cookies et la modale de confidentialité -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookiesButton = document.getElementById('accept-cookies');
+        const privacyLink = document.getElementById('privacy-link');
+
+        // Vérifie si les cookies ont déjà été acceptés
+        if (localStorage.getItem('cookiesAccepted') !== 'true') {
+          cookieBanner.style.display = 'block';
+        }
+
+        // Masque la bannière et enregistre l'acceptation des cookies lorsque l'utilisateur clique sur "Accepter"
+        acceptCookiesButton.addEventListener('click', function() {
+          localStorage.setItem('cookiesAccepted', 'true');
+          cookieBanner.style.display = 'none';
+        });
+
+        // Ouvre la modale de confidentialité sans masquer la bannière
+        privacyLink.addEventListener('click', function() {
+          const event = new Event('showPrivacyPolicy');
+          window.dispatchEvent(event);
+        });
+      });
+    </script>
   </body>
 </html>

@@ -28,7 +28,7 @@ function Contact() {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call it initially to set the correct animation
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -50,25 +50,31 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_o3squg8', 'template_23hr157', form.current, 'ZH2hDI6_HGQa2DYu3')
-      .then((result) => {
-          console.log(result.text);
-          alert('Votre message à bien été envoyé !');
-      }, (error) => {
-          console.log(error.text);
-          alert('Erreur, veuillez réessayer ultérieurement.');
-      });
+    // Obtenir le token reCAPTCHA v3 et l'ajouter au formulaire
+    window.grecaptcha.ready(() => {
+      window.grecaptcha.execute('6LetP18qAAAAAKLGyma_THmaa4dFklhH4NAbrNHH', { action: 'submit' }).then((token) => {
+        // Ajouter le token reCAPTCHA dans le champ caché du formulaire
+        form.current['g-recaptcha-response'].value = token;
 
-    e.target.reset();
+        // Envoyer l'email via emailjs
+        emailjs.sendForm('service_o3squg8', 'template_23hr157', form.current, 'ZH2hDI6_HGQa2DYu3')
+          .then((result) => {
+              console.log(result.text);
+              alert('Votre message à bien été envoyé !');
+          }, (error) => {
+              console.log(error.text);
+              alert('Erreur, veuillez réessayer ultérieurement.');
+          });
+
+        e.target.reset();
+      });
+    });
   };
 
   return (
     <div className="contact">
       <Banner src={contactImage} />
-      <TitleContent 
-        title="Contact" 
-        subtitle=""
-      />
+      <TitleContent title="Contact" subtitle="" />
       <div className="contact__card" data-aos="flip-up">
         <div className="contact__info">
           <div className="contact__info-item">
@@ -79,7 +85,6 @@ function Contact() {
             <img src={mailIcon} alt="Mail" className="contact__icon" />
             <p>lucieplumeria@gmail.com</p>
           </div>
-          {/* Ajout du bouton "Prendre rendez-vous en ligne" avec icône */}
           <div className="contact__info-item">
             <a href="https://appt.link/meet-with-lucie-plumeria-zQVQNSoI" target="_blank" rel="noopener noreferrer">
               <button className="contact__appointment-button">
@@ -132,13 +137,14 @@ function Contact() {
             <option value="Tullins">Tullins</option>
           </select>
           
-          <input type="text" name="name" id="name" placeholder="Nom" required />
-
-          <input type="email" name="email" id="email" placeholder="Email" required />
-
+          <input type="text" name="name" id="name" maxlength="100" placeholder="Nom" required />
+          <input type="email" name="email" id="email" maxlength="100" placeholder="Email" required />
           <input type="tel" name="phone" id="phone" placeholder="Téléphone (facultatif)" />
 
-          <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+          <textarea name="message" id="message" rows="5" maxlength="500" placeholder="Message" required></textarea>
+
+          {/* Champ caché pour le token reCAPTCHA v3 */}
+          <input type="hidden" name="g-recaptcha-response" />
 
           <button type="submit">Envoyer</button>
         </form>
