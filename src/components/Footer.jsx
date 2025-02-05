@@ -43,7 +43,6 @@ function Footer() {
           <span className="footer-link" onClick={handleShowLegalNotice}>
             Mentions légales
           </span>
-          <p>Siret: 92979581300013</p>
           <p>
             © 2024 - Site développé par{' '}
             <a
