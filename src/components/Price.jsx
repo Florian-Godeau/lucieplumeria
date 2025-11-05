@@ -4,7 +4,7 @@ import Banner from './Banner';
 import TitleContent from './TitleContent';
 import seanceImage from '../assets/images/seance.webp';
 import individualImage from '../assets/images/individual.webp';
-import collectifImage from '../assets/images/collectif.webp';
+/*import collectifImage from '../assets/images/collectif.webp';*/
 import entrepriseImage from '../assets/images/entreprise.webp';
 import fiveSeanceImg from '../assets/images/5seance.webp';
 import tenSeanceImg from '../assets/images/10seance.webp';
@@ -45,9 +45,10 @@ function Price() {
           <p>1h</p>
           <p>50€</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>
-          <button onClick={() => handleContactClick('Réservation séance individuelle / Formules')}>Réservation / Contact</button>
+          <button onClick={() => handleContactClick("Demande d'information séance individuelle ou Formules")}>Réservation / Contact</button>
         </div>
       </div>
+      {/*
       <div className="price__card" key="session2">
         <img src={collectifImage} alt="Séance Collective" className="price__card-image" />
         <div className="price__card-text">
@@ -57,12 +58,13 @@ function Price() {
           <button onClick={() => handleContactClick('Réservation séance collective')}>Réservation / Contact</button>
         </div>
       </div>
+      */}
       <div className="price__card price__card--single" key="session3">
         <img src={entrepriseImage} alt="Séance en Entreprise" className="price__card-image" />
         <div className="price__card-text">
           <h2>Séance en Entreprise</h2>
           <p>Me contacter</p>
-          <button onClick={() => handleContactClick('Réservation / Demande séance en entreprise')}>Réservation / Contact</button>
+          <button onClick={() => handleContactClick("Demande d'information séance en entreprise")}>Réservation / Contact</button>
         </div>
       </div>
     </div>
@@ -78,7 +80,7 @@ function Price() {
           <p>Forfait 5 séances avec la première offerte, soit 6 séances à prix tout doux</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>
           <p>Valable 6 mois</p>
-          <button onClick={() => handleContactClick('Réservation séance individuelle / Formules')}>Réservation / Contact</button>
+          <button onClick={() => handleContactClick("Demande d'information séance individuelle ou Formules")}>Réservation / Contact</button>
         </div>
       </div>
       <div className="price__card" key="formula2">
@@ -89,7 +91,7 @@ function Price() {
           <p>Forfait 10 séances avec la première offerte, soit 11 séances à prix tout doux</p>
           <p>Les séances peuvent se faire en présentiel au cabinet mais également en visio</p>
           <p>Valable 12 mois</p>
-          <button onClick={() => handleContactClick('Réservation séance individuelle / Formules')}>Réservation / Contact</button>
+          <button onClick={() => handleContactClick("Demande d'information séance individuelle ou Formules")}>Réservation / Contact</button>
         </div>
       </div>
     </div>

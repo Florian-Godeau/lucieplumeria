@@ -108,33 +108,13 @@ function Contact() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="contact__locations__location">
-            <h2>Tullins <br />Cabinet de Kinésithérapie</h2>
-            <p>1 montée Pinet 38210 Tullins</p>
-            <iframe
-              title='Tullins'
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.2456796208395!2d5.585258215556004!3d45.36417297910008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b9a678cf9b64b%3A0x23d8e2f8d9e7b36!2s1%20Mont%C3%A9e%20Pinet%2C%2038210%20Tullins!5e0!3m2!1sfr!2sfr!4v1620314176882!5m2!1sfr!2sfr"
-              width="300"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
         </div>
         <form ref={form} onSubmit={sendEmail} className="contact__form">
           <select name="contact_reason" id="contact_reason" required>
             <option value="">Pourquoi me contactez-vous?</option>
             <option value="Demande d'information générale">Demande d'information générale</option>
             <option value="Demande d'information séance individuelle ou Formules">Demande d'information séance individuelle ou Formules</option>
-            <option value="Demande d'information séance collective">Demande d'information séance collective</option>
             <option value="Demande d'information séance en entreprise">Demande d'information séance en entreprise</option>
-          </select>
-          
-          <select name="location" id="location" required>
-            <option value="">Lieu de RDV</option>
-            <option value="Voiron">Voiron</option>
-            <option value="Tullins">Tullins</option>
           </select>
           
           <input type="text" name="name" id="name" maxlength="100" placeholder="Nom" required />

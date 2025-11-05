@@ -44,7 +44,7 @@ function HomeContent() {
   title={
     <>
       <div style={{ marginBottom: '20px' }}>Lucie Plumeria</div>
-      <div>Sophrologue à Voiron et Tullins</div>
+      <div>Sophrologue à Voiron</div>
     </>
   }  
 />
