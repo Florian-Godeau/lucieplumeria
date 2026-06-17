@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import instagramLogo from '../assets/images/instagram.png';
+import facebookLogo from '../assets/images/facebook.png';
+import linkedinLogo from '../assets/images/linkedin.png';
+import youtubeLogo from '../assets/images/youtube.png';
 
 function Footer() {
   const [showCGV, setShowCGV] = useState(false);
@@ -54,6 +58,20 @@ function Footer() {
               Florian Godeau
             </a>
           </p>
+          <div className="footer__social">
+            <a href="https://www.instagram.com/lucieplumeria/" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <img src={instagramLogo} alt="Instagram" className="footer__social-logo" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565588814803" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <img src={facebookLogo} alt="Facebook" className="footer__social-logo" />
+            </a>
+            <a href="https://www.linkedin.com/in/lucie-plumeria/" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <img src={linkedinLogo} alt="LinkedIn" className="footer__social-logo" />
+            </a>
+            <a href="https://www.youtube.com/@LuciePlumeria" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <img src={youtubeLogo} alt="YouTube" className="footer__social-logo" />
+            </a>
+          </div>
         </div>
       </footer>
 

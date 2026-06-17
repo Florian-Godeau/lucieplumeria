@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import Banner from './Banner';
-import TitleContent from './TitleContent';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import aboutImage from '../assets/images/about.webp';
+import aboutImage from '../assets/images/aboutnew.webp';
 import lucieImage from '../assets/images/lucie.webp';
 
 function About() {
@@ -12,16 +11,16 @@ function About() {
       const elements = document.querySelectorAll('[data-aos]');
       elements.forEach((element) => {
         if (window.innerWidth <= 768) {
-          element.setAttribute('data-aos', 'flip-right');
+          element.setAttribute('data-aos', 'about-fade-up');
         } else {
-          element.setAttribute('data-aos', 'flip-up');
+          element.setAttribute('data-aos', 'about-fade-up');
         }
       });
       AOS.refresh();
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Call it initially to set the correct animation
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -29,34 +28,29 @@ function About() {
   }, []);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 500 });
   }, []);
 
   return (
     <div className="about">
       <Banner src={aboutImage} />
-      <TitleContent 
-        title="Qui suis-je ?" 
-        subtitle=""
-      />
-      <div className="about__card" data-aos="flip-up">
-        <img src={lucieImage} alt="Lucie Plumeria" className="about__card-image" />
-        <div className="about__card-text">
-          <p>
-            Depuis toujours, j'ai nourri un profond désir de comprendre l'être humain, tant de l'intérieur que de l'extérieur. Mon parcours a commencé par plusieurs années de théâtre, une discipline qui m'a permis d'explorer mes propres émotions en profondeur. En jouant, en comprenant et en exprimant ces émotions, j'ai pu incarner des personnages avec authenticité, découvrant ainsi la vérité de chaque rôle que j'endossais sur scène.
-          </p>
-          <p>
-            Ensuite, j'ai dirigé mon attention vers l'extérieur en devenant ambulancière. Ce rôle m'a offert une perspective précieuse sur le corps humain, ses signaux et les manifestations de la maladie. J'ai appris à écouter les signes du corps et à répondre aux besoins immédiats des patients, cherchant toujours à leur apporter un soulagement maximal.
-          </p>
-          <p>
-            Ces expériences ont éveillé en moi le désir profond d'aider les autres à découvrir leur lumière intérieure et à exploiter leur potentiel infini. J'ai donc entrepris un véritable chemin de développement personnel, enrichi par diverses pratiques et disciplines. Convaincue que le travail sur soi est essentiel pour pouvoir aider autrui, j'ai adopté la devise suivante : en explorant et en harmonisant notre propre être, nous sommes véritablement capables de soutenir ceux qui nous entourent.
-          </p>
-          <p>
-            Aujourd'hui, je suis heureuse de pouvoir offrir une aide précieuse et quotidienne grâce à un éventail d'outils diversifiés. Mon objectif ultime est de vous voir rayonner librement, afin que chacun puisse s'épanouir et retrouver une confiance inébranlable en soi. Dotée d'une curiosité insatiable et d'une empathie naturelle, je m'engage à être une oreille attentive et bienveillante. Mon ambition est d'illuminer les zones d'ombre de votre être et de révéler votre lumière intérieure qui ne demande qu'à briller.
-          </p>
-          <p>
-            Il me tient à cœur de vous guider vers une connexion authentique avec votre essence véritable, vous permettant de rayonner dans la vie que vous méritez pleinement. Je serais honorée de vous accompagner sur ce chemin de découverte de soi, vous aidant à accéder à cette paix intérieure et à cette harmonie qui transformeront votre quotidien.
-          </p>
+      <div className="about__card" data-aos="about-fade-up">
+        <h2 className="about__card-title">Qui suis-je ?</h2>
+        <div className="about__card-content">
+          <img src={lucieImage} alt="Lucie Plumeria" className="about__card-image" />
+          <div className="about__card-text">
+            <p>Je n'ai jamais réellement eu un parcours typique avec un seul métier en CDI durant des années. J'ai toujours aimé faire ce qu'il me semblait bien pour moi, dans l'instant T.</p>
+            <p>J'ai entre autre été comédienne, en passant par ambulancière. Des métiers qui ont énormément de sens à mes yeux : pouvoir être au contact de l'autre. Comédienne dans des comédies de café théâtre, j'ai adoré pouvoir faire rire, adoré que les spectateurs passent un bon moment en oubliant leur tracas du quotidien.</p>
+            <p>Ambulancière, merveilleux métier qui m'a permis d'être au plus proche de ceux qui ont besoin, de les soutenir, de les écouter, d'être une petite échappatoire dans ce qui leur arrive.</p>
+            <p>Après ces beaux métiers, un incendie m'ôtant toute ma vie matérielle m'a permis de faire table rase et de reprendre totalement à zéro. Une véritable renaissance m'a été offerte.</p>
+            <p>Ainsi, tout mon parcours m'a amené à ce que je suis maintenant : thérapeute, là pour vous aider à retrouver qui vous êtes.</p>
+            <p>J'ai toujours eu à cœur d'aider les autres, mais ma devise fondamentale, c'est qu'il faut d'abord passer par soi avant de pouvoir aider quiconque.</p>
+            <p>De par mon histoire, j'ai acquis une connaissance approfondie de moi même, de qui je suis, de qui nous sommes, permettant ainsi de vous transmettre ces clefs.</p>
+            <p>Nous sommes des Êtres de Lumière, nous sommes là pour être, et c'est à ça que je veux vous ramener, Être vous. Pas faire, pas mentaliser, pas se torturer les méninges, juste être.</p>
+            <p>L'individu s'oublie, s'égare dans ses croyances limitantes, se freine, il est temps que cela s'arrête et que tu te retrouves, toi, dans ta lumière, que tu retrouves ta joie et ton petit enfant intérieur qui attend que tu lui laisse la place.</p>
+            <p>Nous sommes des Êtres pour créer, pas pour subir.</p>
+            <p>Alors tu viens, on va voir ta lumière ?</p>
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
   &__tabs {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
     margin-bottom: 20px;
   }
 
@@ -61,7 +62,7 @@
   }
 
   &__card-image {
-    width: 350px;
+    width: 255px;
     height: 240px; /* Fix the height to match the width */
     object-fit: cover; /* Ensure the image covers the area */
     border-radius: 10px;

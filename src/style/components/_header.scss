@@ -1,10 +1,12 @@
-.header {
+﻿.header {
   width: 100%;
 
   &__container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 
     @include respond-to(custom) {
       flex-direction: column;
@@ -14,18 +16,18 @@
   &__brand {
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 0;
 
     @include respond-to(custom) {
       margin-right: 0;
-      margin-bottom: 15px;
+      margin-bottom: 0;
     }
   }
 
   &__logo {
     width: 190px;
     height: auto;
-    padding-left: 15px;
+    padding-left: 0;
 
     @include respond-to(large) {
       width: 150px;
@@ -38,13 +40,33 @@
     }
   }
 
+  &__title {
+    margin: 50px 0;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 3rem;
+    font-weight: 500;
+
+    span {
+      display: block;
+    }
+
+    @include respond-to(large) {
+      font-size: 2rem;
+    }
+
+    @include respond-to(custom) {
+      font-size: 2rem;
+    }
+  }
+
   &__nav {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    gap: 50px;
+    gap: 80px;
 
     @include respond-to(custom) {
       flex-direction: column;
@@ -55,13 +77,13 @@
   &__nav-link {
     position: relative;
     padding: 10px 15px;
-    font-size: 1.2rem;
+    font-size: 2rem;
     transition: color 0.3s, transform 0.3s;
     color: #000;
     text-decoration: none;
 
     @include respond-to(inter) {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 
     @include respond-to(custom) {
@@ -82,49 +104,4 @@
     }
   }
 
-  &__social {
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-
-    @include respond-to(custom) {
-      margin-left: 0;
-      margin-top: 10px;
-      flex-direction: row;
-      justify-content: center;
-      width: 100%;
-      gap: 30px;
-
-    }
-  }
-
-  &__social-link {
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    text-decoration: none;
-
-    &:hover {
-      transform: scale(1.2);
-      color: #555;
-      text-decoration: none;
-    }
-
-    img {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s ease-in-out;
-
-      @include respond-to(custom) {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
-
-  &__social-logo {
-    width: 30px;
-    height: auto;
-  }
 }

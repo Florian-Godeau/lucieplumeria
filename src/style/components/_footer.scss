@@ -1,29 +1,65 @@
-.footer {
-    background-color: rgba(255, 245, 235, 1);
-    padding: 20px;
-    border-radius: 100% 100% 0 0;
-    text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); // Optional: add shadow for floating effect
-    margin-top: 40px;
-  
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      .footer-link {
-        color: #000;
-        text-decoration: none;
-        margin: 5px 0;
-        cursor: pointer;
-  
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-  
-      p {
-        margin: 5px 0;
+﻿.footer {
+  background-color: rgba(255, 245, 235, 1);
+  padding: 20px;
+  border-radius: 100% 100% 0 0;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); // Optional: add shadow for floating effect
+  margin-top: 40px;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-link {
+      color: #000;
+      text-decoration: none;
+      margin: 5px 0;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
+
+    p {
+      margin: 5px 0;
+    }
   }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__social-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  @include respond-to(custom) {
+    &__social {
+      gap: 12px;
+    }
+
+    &__social-logo {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
