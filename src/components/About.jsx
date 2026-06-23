@@ -35,10 +35,10 @@ function About() {
     <div className="about">
       <Banner src={aboutImage} />
       <div className="about__card" data-aos="about-fade-up">
-        <h2 className="about__card-title">Qui suis-je ?</h2>
         <div className="about__card-content">
           <img src={lucieImage} alt="Lucie Plumeria" className="about__card-image" />
           <div className="about__card-text">
+            <h2 className="about__card-title">Qui suis-je ?</h2>
             <p>Je n'ai jamais réellement eu un parcours typique avec un seul métier en CDI durant des années. J'ai toujours aimé faire ce qu'il me semblait bien pour moi, dans l'instant T.</p>
             <p>J'ai entre autre été comédienne, en passant par ambulancière. Des métiers qui ont énormément de sens à mes yeux : pouvoir être au contact de l'autre. Comédienne dans des comédies de café théâtre, j'ai adoré pouvoir faire rire, adoré que les spectateurs passent un bon moment en oubliant leur tracas du quotidien.</p>
             <p>Ambulancière, merveilleux métier qui m'a permis d'être au plus proche de ceux qui ont besoin, de les soutenir, de les écouter, d'être une petite échappatoire dans ce qui leur arrive.</p>
