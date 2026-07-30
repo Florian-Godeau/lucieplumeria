@@ -116,5 +116,24 @@
         margin: 15px 0;
       }
     }
+
+    .price__info-button {
+      margin-top: 8px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      color: #b50000;
+      box-shadow: none;
+      text-decoration: underline;
+
+      &:hover {
+        background: transparent;
+        color: #7f0000;
+      }
+
+      @include respond-to(medium) {
+        margin: 10px 0 0;
+      }
+    }
   }
 }
