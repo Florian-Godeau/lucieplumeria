@@ -32,11 +32,11 @@ function HomeContent() {
             </div>
             <div className="home-content__text-wrapper">
               <h2>Plaisir et sérénité à Voiron</h2>
-              <p>Je vous propose un espace de bien-être dédié à la relaxation et au bien-être du corps et de l'esprit. Ainsi, venez vous ressourcez avec des séances de sophrologie, des massages relaxants ou des méditations personnalisées pour vous aider à retrouver équilibre et sérénité.</p>
+              <p>Je vous propose un espace de bien-être dédié à la relaxation et au bien-être du corps et de l'esprit. Ainsi, venez vous ressourcez avec des séances de sophrologie, des massages relaxants, le tout vous permettant de retrouver une harmonie profonde, une sérénité et un sentiment de paix.</p>
               <p>J'aime pouvoir vous proposer divers éléments vous permettant de vous retrouver pleinement en vous-même, selon vos préférences.</p>
               <p>Avec la sophrologie, je vous transmet un outil permettant une détente instantanée lors des séances, et une détente chez vous à votre rythme en reproduisant ce qu'on a fait en consultation.</p>
-              <p>Avec le massage TuiNa, je vous propose un moment afin de vous reconnecter à votre corps, dans une détente totale et profonde, permettant de lâcher le mental et de vous recentrer pleinement avec vous même.</p>
-              <p>Avec la méditation guidée, je vous transmet un outil intégralement personnalisé que vous utiliserez où vous le souhaitez, à votre rythme, que vous pouvez garder à vie.</p>
+              <p>Avec le massage bien-être intuitif, je vous propose un moment afin de vous reconnecter à votre corps, dans une détente totale et profonde, permettant de lâcher le mental et de vous recentrer pleinement avec vous même.</p>
+              <p>Avec le massage Qi Nei Zang, un massage du ventre, notre deuxième cerveau, là où se loge nos émotions. Ce massage a pour but de dénouer les tensions physiques et émotionnelles.</p>
               <p><strong><em>Mon but ici est que vous puissiez être autonome sur votre chemin, je vous donne des axes, des outils à utiliser tranquillement de votre côté, afin que vous-même vous puissiez retrouver pleinement qui vous êtes.</em></strong></p>
             </div>
           </div>

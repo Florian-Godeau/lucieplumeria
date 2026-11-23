@@ -71,4 +71,14 @@
       font-size: 1rem;
     }
   }
+
+  &__training-list {
+    list-style-type: "–  ";
+    padding-inline-start: 1.25rem;
+    text-align: left;
+
+    li + li {
+      margin-top: 1rem;
+    }
+  }
 }

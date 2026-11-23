@@ -53,6 +53,22 @@ function About() {
           </div>
         </div>
       </div>
+      <div className="about__card" data-aos="about-fade-up">
+        <div className="about__card-content">
+          <div className="about__card-text">
+            <h2 className="about__card-title">Mon parcours</h2>
+            <ul className="about__training-list">
+              <li>
+                Formation massage Qi Nei Zang, Centre Suwen (Grenoble) par Kim Lan Toffin
+                <br />
+                <a href="https://www.acupoint.fr" target="_blank" rel="noopener noreferrer">www.acupoint.fr</a>. Kim est originaire de Chine et de Singapour, elle s'est formée dans plusieurs pays et enseigne depuis 2008 à Grenoble.
+              </li>
+              <li>Diplôme RNCP Sophrologue, Formaquiétude (Grenoble)</li>
+              <li>Enseignements Virginie Lascension (Se libérer du saboteur, Non-Duel, Accepter sa Puissance, Cohérence Solaire, Change ta vie Méthode Quanta, Starseed, etc...)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

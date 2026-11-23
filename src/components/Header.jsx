@@ -16,6 +16,8 @@ function Header() {
         <h1 className="header__title">
           <span>Lucie Plumeria</span>
           <span>Sophrologue à Voiron</span>
+          <span>Massage bien-être intuitif</span>
+          <span>Massage Qi Nei Zang (ventre et émotions)</span>
         </h1>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setOpen(!open)} aria-expanded={open} />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -23,7 +25,7 @@ function Header() {
             <div className="navbar-collapse">
               <Nav className="header__nav">
                 <Nav.Link as={Link} to="/" className={`header__nav-link ${location.pathname === '/' ? 'header__nav-link--active' : ''}`}>Accueil</Nav.Link>
-                <Nav.Link as={Link} to="/about" className={`header__nav-link ${location.pathname === '/about' ? 'header__nav-link--active' : ''}`}>Qui suis-je ?</Nav.Link>
+                <Nav.Link as={Link} to="/about" className={`header__nav-link ${location.pathname === '/about' ? 'header__nav-link--active' : ''}`}>Qui suis-je ? / Mon parcours</Nav.Link>
                 <Nav.Link as={Link} to="/price" className={`header__nav-link ${location.pathname === '/price' ? 'header__nav-link--active' : ''}`}>Prestations/Tarifs</Nav.Link>
                 <Nav.Link as={Link} to="/contact" className={`header__nav-link ${location.pathname === '/contact' ? 'header__nav-link--active' : ''}`}>Contact</Nav.Link>
               </Nav>

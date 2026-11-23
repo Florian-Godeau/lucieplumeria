@@ -5,7 +5,7 @@ import Banner from './Banner';
 import seanceImage from '../assets/images/price.webp';
 import individualImage from '../assets/images/sophrologie.webp';
 import collectifImage from '../assets/images/massage.webp';
-import entrepriseImage from '../assets/images/meditation.webp';
+import qiNeiZangImage from '../assets/images/meditation.webp';
 import fiveSeanceImg from '../assets/images/giftcard.webp';
 import tenSeanceImg from '../assets/images/10seance.webp';
 
@@ -13,6 +13,7 @@ function Price() {
   const [selectedTab, setSelectedTab] = useState('sessions');
   const [showSophroInfo, setShowSophroInfo] = useState(false);
   const [showMassageInfo, setShowMassageInfo] = useState(false);
+  const [showQiNeiZangInfo, setShowQiNeiZangInfo] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,6 +33,10 @@ function Price() {
 
   const handleContactClick = (reason) => {
     navigate(`/contact?reason=${encodeURIComponent(reason)}`);
+  };
+
+  const handleMassageContactClick = () => {
+    handleContactClick("Demande d'information / réservation massage");
   };
 
   const handleTabClick = (tab) => {
@@ -62,28 +67,32 @@ function Price() {
       <div className="price__card" key="session2">
         <img src={collectifImage} alt="Massage" className="price__card-image" />
         <div className="price__card-text">
-          <h2>Massage Tui Na intuitif</h2>
-          <p>Massage 1h15 aux huiles chaudes</p>
-          <p>75€</p>
-          <p>Formule 5 massages : 350€</p>
+          <h2>Massage Bien-Être Intuitif</h2>
+          <p>Massage 1h30 (minimum) aux huiles chaudes</p>
+          <p>90€</p>
+          <p>Formule 5 massages : 420€</p>
           <button type="button" className="price__info-button" onClick={handleShowMassageInfo}>
             plus d'infos ici
           </button>
-          <button onClick={() => handleContactClick("Demande d'information / réservation massage")}>Réservation / Contact</button>
+          <button onClick={handleMassageContactClick}>Réservation / Contact</button>
         </div>
       </div>
       }
-      {/*
+      {
       <div className="price__card price__card--single" key="session3">
-        <img src={entrepriseImage} alt="Méditation" className="price__card-image" />
+        <img src={qiNeiZangImage} alt="" className="price__card-image" />
         <div className="price__card-text">
-          <h2>Méditation Personnalisée</h2>
-          <p>Tarif clef : 44.4€</p>
-          <p>La durée varie entre 20 et 40min</p>
-          <button onClick={() => handleContactClick("Demande d'information séance en entreprise")}>Réservation / Contact</button>
+          <h2>Massage Qi Nei Zang</h2>
+          <p>Massage du ventre/des émotions 1h30 (minimum)</p>
+          <p>90€</p>
+          <p>Formule 5 massages : 420€</p>
+          <button type="button" className="price__info-button" onClick={() => setShowQiNeiZangInfo(true)}>
+            plus d'infos ici
+          </button>
+          <button onClick={handleMassageContactClick}>Réservation / Contact</button>
         </div>
       </div>
-      */}
+      }
     </div>
   );
 
@@ -153,28 +162,65 @@ function Price() {
 
       <Modal show={showMassageInfo} onHide={handleCloseMassageInfo} dialogClassName="modal-dialog-scrollable">
         <Modal.Header closeButton>
-          <Modal.Title>Massage TuiNa intuitif</Modal.Title>
+          <Modal.Title>Massage Bien-Être Intuitif</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Je vous propose des massages TuiNa intuitif.</p>
+          <p>Je vous propose des massages intuitif.</p>
           <p>
-            Le massage Tui Na est un massage thérapeutique issu de la médecine traditionnelle chinoise permettant :
-          </p>
-          <ul>
-            <li>l'équilibre du Qi (l'énergie vitale)</li>
-            <li>le soulagement des douleurs musculaires et articulaires</li>
-            <li>l'amélioration de la circulation sanguine et lymphatique</li>
-            <li>la réduction du stress et de l'anxiété</li>
-            <li>la stimulation du système immunitaire</li>
-          </ul>
-          <p>
-            Lors de ce massage, je ne fais pas un protocole particulier, j'ai mon fil rouge mais mon ressenti me permet
-            d'aller au delà d'un protocole, je sens les tensions, les énergies bloquées en vous, et je les dénoues dans
-            une parfaite connexion de ce dont vous avez besoin.
+            Ce massage est un moment entièrement intuitif, où je prends conscience de votre corps et
+            me laisse guider pour ce qu'il y a de mieux pour vous.
+            <br />
+            Je vais chercher les tensions pour les
+            dénouer, vous envelopper afin que vous puissiez vous relâcher et vous sentir dans un espace
+            sécurisé.
+            <br />
+            Je prends véritablement le temps, en conscience.
+            <br />
+            Vous déconnecter de votre quotidien et vous aider à retrouver un apaisement total est ce qui m'importe.
+            <br />
+            Le massage dure autour d'1h30, il se peut que ça aille jusqu'à 1h45, selon le moment.
+            <br />
+            Le prix reste fixe.
+            <br />
+            Ici je masse le dos, les bras, les jambes, le ventre et la tête, sauf si contre-indication pour
+            certaines zones.
           </p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseMassageInfo}>
+            Fermer
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal show={showQiNeiZangInfo} onHide={() => setShowQiNeiZangInfo(false)} dialogClassName="modal-dialog-scrollable">
+        <Modal.Header closeButton>
+          <Modal.Title>Massage Qi Nei Zang</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Le ventre est désigné dans la Medecine Traditionnelle Chinoise comme le deuxième cerveau de notre corps.
+            <br />
+            Il est le siège de nos émotions.
+            <br />
+            Dans ce massage, je vous propose de vous libérer de vos tensions accumulées, de retrouver une
+            respiration ample et profonde, et une digestion plus légère.
+            <br />
+            Ce massage se caractérise sur 3 étapes :
+          </p>
+          <ul>
+            <li>détoxifier</li>
+            <li>renforcer les organes/entrailles et restructurer le corps</li>
+            <li>libérer ses émotions</li>
+          </ul>
+          <p>C'est un massage qui se fait sous forme de cure, plusieurs massages sont necessaires pour voir des effets bénéfiques sur le long terme.</p>
+          <p>
+            Ici je masse les bras, le ventre, les pieds et la tête.
+            <br />
+            Sauf si contre-indication pour certaines zones.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowQiNeiZangInfo(false)}>
             Fermer
           </Button>
         </Modal.Footer>
